@@ -21,7 +21,7 @@ rpm -Uvh epel-release-6*.rpm
 echo "y" | yum --enablerepo=remi,remi-php56 install -y perl nginx redis mysql-dev mysql-libs memcached php php-devel pcre-devel php-fpm php-pdo php-mcrypt php-redis php-gd php-xml php-recode php-mbstring php-mysql php-intl php-opcache php-pear php-pecl-memcache php-pecl-memcached php-apc libxml2-devel
 
 sed -i '10i-A INPUT -p tcp -m state --state NEW -m tcp --dport 80 -j ACCEPT' /etc/sysconfig/iptables
-sed -i '10i-A INPUT -p tcp -m state --state NEW -m tcp --dport 3050 -j ACCEPT' /etc/sysconfig/iptables
+sed -i '10i-A INPUT -p tcp -m state --state NEW -m tcp --dport 3000 -j ACCEPT' /etc/sysconfig/iptables
 sed -i '11i-A INPUT -p tcp -m state --state NEW -m tcp --dport 3306 -j ACCEPT' /etc/sysconfig/iptables
 setsebool -P httpd_can_network_connect 1
 
