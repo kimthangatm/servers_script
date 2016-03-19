@@ -1,6 +1,6 @@
 #!/bin/bash
 # Use bellow command:
-# curl https://raw.githubusercontent.com/kimthangatm/servers_script/master/init_server_api.sh | sh
+# curl https://raw.githubusercontent.com/kimthangatm/servers_script/master/centos-6.7/init_server_api.sh | sh
 
 #Config Color
 BG_GREEN="\e[42m\e[97m"
@@ -16,7 +16,7 @@ yum install -y wget nano git tree zip unzip tar man gcc gcc-c++ make
 cd /etc/yum.repos.d
 wget http://dl.fedoraproject.org/pub/epel/6/x86_64/epel-release-6-8.noarch.rpm
 wget http://rpms.famillecollet.com/enterprise/remi.repo
-wget https://raw.githubusercontent.com/kimthangatm/servers_script/master/init_server_api/nginx.repo
+wget https://raw.githubusercontent.com/kimthangatm/servers_script/master/centos-6.7/init_server_api/nginx.repo
 rpm -Uvh epel-release-6*.rpm
 echo "y" | yum --enablerepo=remi,remi-php56 install -y perl nginx redis mysql-dev mysql-libs memcached php php-devel pcre-devel php-fpm php-pdo php-mcrypt php-redis php-gd php-xml php-recode php-mbstring php-mysql php-intl php-opcache php-pear php-pecl-memcache php-pecl-memcached php-apc libxml2-devel
 
@@ -32,11 +32,11 @@ echo "<?php echo phpinfo();" > /usr/share/nginx/html/index.php
 
 rm -fr /etc/php.ini
 cd /etc/
-wget https://raw.githubusercontent.com/kimthangatm/servers_script/master/init_server_api/php.ini
+wget https://raw.githubusercontent.com/kimthangatm/servers_script/master/centos-6.7/init_server_api/php.ini
 cd /etc/nginx/conf.d/
-wget https://raw.githubusercontent.com/kimthangatm/servers_script/master/init_server_api/api-demo.conf
+wget https://raw.githubusercontent.com/kimthangatm/servers_script/master/centos-6.7/init_server_api/api-demo.conf
 cd /etc/php.d/
-wget https://raw.githubusercontent.com/kimthangatm/servers_script/master/init_server_api/60-phalcon.ini
+wget https://raw.githubusercontent.com/kimthangatm/servers_script/master/centos-6.7/init_server_api/60-phalcon.ini
 
 
 #Install Phalcon

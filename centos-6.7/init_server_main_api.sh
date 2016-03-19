@@ -1,6 +1,6 @@
 #!/bin/bash
 # Use bellow command:
-# curl https://raw.githubusercontent.com/kimthangatm/servers_script/master/init_server_api.sh | sh
+# curl https://raw.githubusercontent.com/kimthangatm/servers_script/master/centos-6.7/init_server_api.sh | sh
 
 #Config Color
 BG_GREEN="\e[42m\e[97m"
